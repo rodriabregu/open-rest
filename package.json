@@ -1,25 +1,20 @@
 {
   "name": "open-rest",
-  "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.0",
+    "typescript": "5.8.2"
   },
+  "packageManager": "pnpm@9.0.0",
   "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
-  "packageManager": "pnpm@7.14.2"
+    "node": ">=18"
+  }
 }
